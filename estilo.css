@@ -10,7 +10,7 @@ header.cabecalho {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #ffffff;
+    background-color: #31235a;
     border-bottom: 2px solid #333;
 }
 
@@ -34,4 +34,54 @@ nav.menu-navegacao a {
     color: #333;
     font-weight:bold;
     font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+nav.menu-navegacao a:hover {
+    background-color: #a79a9a;
+    transform: scale(0.95);
+}
+
+section.banner-principal {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+}
+
+section.banner-principal img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+section.banner-principal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+section.banner-principal .botao-explorar {
+    padding: 12px 28px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+section.banner-principal .botao-explorar:hover {
+    background-color: #555;
+}
+
+section.botao-explorar .botao-explorar:active {
+    transform: scale(0.95);
 }
