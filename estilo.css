@@ -31,7 +31,7 @@ nav.menu-navegacao li {
 
 nav.menu-navegacao a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight:bold;
     font-size: 14px;
     padding: 4px 12px;
@@ -84,4 +84,58 @@ section.banner-principal .botao-explorar:hover {
 
 section.botao-explorar .botao-explorar:active {
     transform: scale(0.95);
+}
+
+section.destaques {
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+section.destaques h3 {
+    font-size: 14px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+article.card-jogo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+
+article.card-jogo img:hover {
+    transform: scale(1.03);
+}
+
+article.card-jogo h4 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+article.card-jogo p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+article.card-jogo a.detalhes {
+    font-size: 13px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article.card-jogo a.detalhes:hover {
+    text-decoration: underline;
 }
