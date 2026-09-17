@@ -40,7 +40,7 @@ nav.menu-navegacao a {
 }
 
 nav.menu-navegacao a:hover {
-    background-color: #a79a9a;
+    background-color: #c1aae6;
     transform: scale(0.95);
 }
 
@@ -253,4 +253,21 @@ form.form-novidades:valid:focus-within .btn-enviar:focus::after {
     font-size: 12px;
     font-weight: bold;
     color: white;
+}
+
+footer.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #31235a;
+    border-top: 2px solid #333;
+    font-size: 16px;
+    width: 100%;
+}
+
+footer.rodape .sociais span {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #000000;
 }
