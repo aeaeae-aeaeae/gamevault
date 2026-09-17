@@ -2,22 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #f4f4f9;
+}
 header.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #31235a;
-    border-bottom: 2px solid #333;
+    border-bottom: 3px solid #c1aae6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 header.cabecalho .logo {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 nav.menu-navegacao ul {
@@ -31,55 +36,62 @@ nav.menu-navegacao li {
 
 nav.menu-navegacao a {
     text-decoration: none;
-    color: #000000;
-    font-weight:bold;
-    font-size: 14px;
-    padding: 4px 12px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 nav.menu-navegacao a:hover {
     background-color: #c1aae6;
-    transform: scale(0.95);
+    color: #31235a;
 }
 
 section.banner-principal {
     text-align: center;
-    background-color: #ffffff;
     padding: 40px 50px;
     margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 section.banner-principal img {
     width: 100%;
-    max-height: 500px;
+    max-height: 350px;
     object-fit: cover;
     object-position: center 35%;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 section.banner-principal h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
-    color: #111;
+    color: #333;
+    font-weight: 500;
 }
 
 section.banner-principal .botao-explorar {
-    padding: 12px 28px;
-    background-color: #333;
+    padding: 12px 30px;
+    background-color: #4c3b80;
     color: #ffffff;
     border: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: 1px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 25px;
     transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(76, 59, 128, 0.3);
 }
 
 section.banner-principal .botao-explorar:hover {
-    background-color: #555;
+    background-color: #c1aae6;
+    color: #31235a;
+    transform: translateY(-2px);
 }
 
 section.botao-explorar .botao-explorar:active {
@@ -87,35 +99,51 @@ section.botao-explorar .botao-explorar:active {
 }
 
 section.destaques {
-    padding: 0 50px;
-    margin-bottom: 50px;
+    padding: 0;
 }
 
 section.destaques h3 {
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #222;
 }
 
 .grid-jogos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 20px;
+}
+
+.card-jogo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+article.card-jogo {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid #eef0f5;
 }
 
 article.card-jogo img {
     width: 100%;
-    height: 180px;
+    height: 140px;
     object-fit: cover;
-    object-position: center 25%;
     border-radius: 6px;
-    margin-bottom: 12px;
-    transition: transform 0.2s ease;
+    margin-bottom: 10px;
 }
 
-article.card-jogo img:hover {
-    transform: scale(1.03);
+.card-jogo-link:hover article.card-jogo {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(49, 35, 90, 0.15);
+    border-color: #c1aae6;
 }
+
 
 article.card-jogo h4 {
     font-size: 16px;
@@ -123,55 +151,86 @@ article.card-jogo h4 {
     margin-bottom: 4px;
 }
 
+.card-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.card-titulo h4 {
+    font-size: 14px;
+    color: #222;
+    font-weight: 700;
+    white-space: nowrap;
+    max-width: 110px;
+}
+
+.card-nota {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ff9800;
+    background-color: #fff8e1;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
 article.card-jogo p {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-article.card-jogo a.detalhes {
-    font-size: 13px;
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-article.card-jogo a.detalhes:hover {
-    text-decoration: underline;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 12px;
 }
 
 section.secao-generos {
-    padding: 0 50px;
-    margin-bottom: 50px;
+    flex: 1;
+    max-width: 250px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.botoes-genero {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 section.secao-generos h3 {
     font-size: 14px;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #31235a;
+    border-left: 4px solic #4c3b80;
+    padding-left: 10px;
 }
 
 .botoes-genero {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
 .btn-genero {
-    padding: 15px;
-    background-color: #333;
-    color: white;
-    border: none;
+    padding: 12px;
+    background-color: #f4f4f9;
+    color: #4c3b80;
+    border: 1px solid #e2e2e9;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 6px;
+    padding-left: 15px;
+    text-align: left;
     transition: all 0.2s ease;
 }
 
 .btn-genero:hover {
-    background-color: #555;
+    background-color: #c1aae6;
+    color: #ffffff;
+    padding-top: 20px;
 }
 
 .btn-genero:active {
@@ -182,66 +241,77 @@ section.secao-newsletter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
-    background-color: #ffffff;
-    border-top: 2px solid #333;
-    margin-bottom: 120px;
+    padding: 40px 50px;
+    background-color: #31235a;
+    margin: 0 50px 50px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(49, 35, 90, 0.2);
 }
 
 .newsletter-texto h3 {
-    font-size: 14px;
-    max-width: 200px;
+    font-size: 16px;
+    max-width: 250px;
     letter-spacing: 1px;
     line-height: 1.4;
+    color: #ffffff;
 }
 
 form.form-novidades {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .campos-grupo {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 form.form-novidades input {
-    padding: 10px 15px;
-    border: none;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    width: 400px;
-    font-size: 14px;
-    color: #333;
+    padding: 12px 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(227, 204, 240, 0.11);
+    border-radius: 6px;
+    width: 320px;
+    font-size: 13px;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+form.form-novidades input:focus {
+    background-color: rgba(255,255,255,0.15);
+    outline: none;
+    border-color: #c1aae6;
 }
 
 form.form-novidades .btn-enviar {
-    padding: 15px 40px;
-    background-color: #888888;
-    color: white;
+    padding: 15px 35px;
+    background-color: #c1aae6;
+    color: #31235a;
     border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-weight: 700;
     text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 form.form-novidades .btn-enviar:hover {
-    background-color: #555555;
+    background-color: #ffffff;
+    transform: translateY(-2px);
 }
 
 form.form-novidades:valid .btn-enviar:active {
     background-color: #2e7d32 !important;
-    transition: none;
+    color: white !important;
 }
 
 form.form-novidades:valid:focus-within .btn-enviar:focus {
     background-color: #2e7d32 !important;
+    color: white !important;
 }
 
 form.form-novidades:valid:focus-within .btn-enviar:focus .texto-botao {
@@ -259,15 +329,101 @@ footer.rodape {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #31235a;
-    border-top: 2px solid #333;
-    font-size: 16px;
+    padding: 25px 50px;
+    background-color: #1f143d;;
+    font-size: 13px;
     width: 100%;
 }
 
 footer.rodape .sociais span {
     margin-right: 15px;
+    font-weight: 600;
+    color: #c1aae6;
+}
+
+footer.rodape .sociais a {
+    color: inherit; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer.rodape .sociais a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer.rodape .copyright {
+    color: #c1aae6;
+}
+
+.conteudo-layout {
+    display: flex;
+    padding: 0 50px;
+    gap: 35px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.conteudo-dir {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section.destaques {
+    padding: 0;
+}
+
+.noticias-lateral {
+    margin-top: 35px;
+    border-top: 2px solid #f4f4f9;
+    padding-top: 20px;
+}
+
+.noticias-laterais h3 {
+    font-size: 13px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #31235a;
+    border-left: 4px solid #4c3b80;
+    padding-left: 10px;
+}
+
+article.noticia-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e2e2e9;
+}
+
+article.noticia-item:last-child {
+    border-bottom: none;
+}
+
+.noticia-data {
+    font-size: 10px;
+    color: #a0a0b0;
+    display: block;
+    margin-bottom: 4px;
     font-weight: bold;
-    color: #000000;
+}
+
+article.noticia-item h4 {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+article.noticia-item a.link-noticia {
+    font-size: 11px;
+    color: #4c3b80;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+article.noticia-item a.link-noticia:hover {
+    color: #c1aae6;
+    text-decoration: underline;
 }
