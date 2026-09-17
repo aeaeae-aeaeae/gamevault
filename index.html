@@ -18,11 +18,13 @@
         </nav>
     </header>
     <main>
+
         <section class="banner-principal">
             <img src="https://picsum.photos/id/96/4752/3168/" alt="Banner">
             <h2>Descubra o seu próximo jogo</h2>
             <button class="botao-explorar">Explorar Jogos</button>
         </section>
+
         <section class="destaques">
             <h3>JOGOS EM DESTAQUE</h3>
             <div class="grid-jogos">
@@ -54,10 +56,36 @@
                     <p>Ação / Sci-Fi</p>
                     <a href="#" class="detalhes">[Detalhes]</a>
                 </article>
+        </section>
 
+        <section class="secao-generos">
+            <h3>EXPLORE POR GÊNERO</h3>
+            <div class="botoes-genero">
+                <button class="btn-genero">Ação</button>
+                <button class="btn-genero">Aventura</button>
+                <button class="btn-genero">Estratégia</button>
+                <button class="btn-genero">RPG</button>
+                <button class="btn-genero">Simulação</button>
+                <button class="btn-genero">Terror</button>
+            </div>
+        </section>
+
+        <section class="secao-newsletter">
+            <div class="newsletter-texto">
+                <h3>RECEBA NOVIDADES E PROMOÇÕES!</h3>
+            </div>
+
+            <form class="form-novidades" onsubmit="event.preventDefault();">
+                <div class="campos-grupo">
+                    <input type="text" placeholder="Nome:" required>
+                    <input type="email" placeholder="E-mail:" required>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                    <span class="texto-botao">ENVIAR</span>
+                </button>
+            </form>
         </section>
     </main>
-    <article></article>
-    <footer></footer>
 </body>
 </html>
