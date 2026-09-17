@@ -427,3 +427,83 @@ article.noticia-item a.link-noticia:hover {
     color: #c1aae6;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+
+    header.cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    nav.menu-navegacao ul {
+        display: flex;
+        flex-wrap: wrap;       
+        justify-content: center;
+        gap: 10px;
+    }
+
+     nav.menu-navegacao li {
+        margin-left: 0;
+    }
+
+     nav.menu-navegacao a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+
+    .conteudo-layout {
+        flex-direction: column;
+        padding: 15px;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    section.secao-generos {
+        max-width: 100%;
+    }
+
+    .botoes-genero {
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+        gap: 10px;
+    }
+
+    .grid-jogos {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-dir {
+        width: 100%
+    }
+
+    section.banner-principal img {
+        max-height: 200px;
+    }
+
+    section.secao-newsletter { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center; 
+        margin: 20px; 
+        padding: 30px 20px; 
+    }
+
+    form.form-novidades { 
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+    form.form-novidades input { 
+        width: 100%; 
+    }
+
+    footer.rodape { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center; 
+        padding: 25px 20px; 
+    }
+}
